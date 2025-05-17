@@ -35,7 +35,7 @@
     .form-container {
       max-width: 500px;
       margin: auto;
-      background: rgba(255,255,255,0.9);
+      background: url('assets/img/hero/h1_hero1.png') no-repeat center center fixed;
       padding: 30px;
       border-radius: 10px;
       box-shadow: 0 0 15px rgba(0,0,0,0.2);

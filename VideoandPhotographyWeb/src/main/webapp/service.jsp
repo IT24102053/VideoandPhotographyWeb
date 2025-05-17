@@ -13,7 +13,7 @@
 
   <style>
     body {
-      background: #0f172a;
+      background: url('assets/img/hero/h1_hero1.png') no-repeat center center fixed;
       color: white;
       font-family: 'Segoe UI', sans-serif;
       overflow-x: hidden;

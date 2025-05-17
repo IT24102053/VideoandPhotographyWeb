@@ -7,7 +7,9 @@ import java.util.*;
 
 public class UserManager {
     private List<User> users = new ArrayList<>();
-    private static final String FILE_PATH = "E:/SLIIT_Bacholer/_1_Year_sem2/OOP_External_Project/VideoandPhotographyWeb/users.txt";
+
+    // ✅ Your exact file path
+    private static final String FILE_PATH = "C:/Users/User/Desktop/New folder/OOP_External_Project/OOP_External_Project/VideoandPhotographyWeb/users.txt";
 
     public UserManager() {
         try {
@@ -20,7 +22,17 @@ public class UserManager {
     public void loadFromFile() throws IOException {
         users.clear();
         File file = new File(FILE_PATH);
-        if (!file.exists()) file.createNewFile();
+
+        // ✅ Create parent folders if missing
+        File parent = file.getParentFile();
+        if (parent != null && !parent.exists()) {
+            parent.mkdirs();
+        }
+
+        // ✅ Create the file if missing
+        if (!file.exists()) {
+            file.createNewFile();
+        }
 
         try (Scanner scanner = new Scanner(file)) {
             while (scanner.hasNextLine()) {
@@ -33,7 +45,15 @@ public class UserManager {
     }
 
     public void saveToFile() throws IOException {
-        try (PrintWriter writer = new PrintWriter(new FileWriter(FILE_PATH))) {
+        File file = new File(FILE_PATH);
+
+        // ✅ Ensure parent folders exist before saving
+        File parent = file.getParentFile();
+        if (parent != null && !parent.exists()) {
+            parent.mkdirs();
+        }
+
+        try (PrintWriter writer = new PrintWriter(new FileWriter(file))) {
             for (User user : users) {
                 writer.println(user.toString());
             }
@@ -56,5 +76,44 @@ public class UserManager {
             }
         }
         users.add(user);
+        try {
+            saveToFile();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    public boolean deleteUser(String username, String password) {
+        boolean deleted = false;
+        Iterator<User> iterator = users.iterator();
+        while (iterator.hasNext()) {
+            User user = iterator.next();
+            if (user.getUsername().equals(username) && user.getPassword().equals(password)) {
+                iterator.remove();
+                deleted = true;
+                break;
+            }
+        }
+        try {
+            saveToFile();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        return deleted;
+    }
+
+    public boolean updatePassword(String username, String oldPassword, String newPassword) {
+        for (User user : users) {
+            if (user.getUsername().equals(username) && user.getPassword().equals(oldPassword)) {
+                user.setPassword(newPassword);
+                try {
+                    saveToFile();
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+                return true;
+            }
+        }
+        return false;
     }
 }

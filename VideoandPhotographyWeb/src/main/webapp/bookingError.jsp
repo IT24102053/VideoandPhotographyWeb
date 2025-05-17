@@ -16,7 +16,7 @@
     <title>Booking Error</title>
     <style>
         body {
-            background: #fff0f0;
+            background: url('assets/img/hero/h1_hero1.png') no-repeat center center fixed;
             font-family: Arial, sans-serif;
             text-align: center;
             padding-top: 100px;

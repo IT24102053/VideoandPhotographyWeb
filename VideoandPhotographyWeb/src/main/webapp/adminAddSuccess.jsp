@@ -7,7 +7,7 @@
   <style>
     body {
       font-family: Arial, sans-serif;
-      background: #f0f8ff;
+      background: url('assets/img/hero/h1_hero1.png') no-repeat center center fixed;
       display: flex;
       align-items: center;
       justify-content: center;

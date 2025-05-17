@@ -6,7 +6,7 @@
   <title>Registration Successful</title>
   <style>
     body {
-      background: url('images/logWall.jpg') no-repeat center center fixed;
+      background: url('assets/img/hero/h1_hero1.png') no-repeat center center fixed;
       background-size: cover;
       font-family: Arial, sans-serif;
       margin: 0;

@@ -107,6 +107,8 @@
     <textarea name="description" placeholder="Description" rows="3" required></textarea>
     <input type="number" name="price" step="0.01" placeholder="Price (LKR)" required>
     <button type="submit">Add Package</button>
+
+    <a href="adminDashboard.jsp" style="padding:10px 20px; background-color:#af4c4c; color:white; border:none; border-radius:5px; text-decoration:none;">Back to Home</a>
   </form>
 
   <table>

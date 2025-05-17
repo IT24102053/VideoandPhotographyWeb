@@ -9,7 +9,7 @@
   <style>
     body {
       font-family: Arial, sans-serif;
-      background: #eef2f3;
+      background: url('assets/img/hero/h1_hero1.png') no-repeat center center fixed;
     }
 
     h2 {

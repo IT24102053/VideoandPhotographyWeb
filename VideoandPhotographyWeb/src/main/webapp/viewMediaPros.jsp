@@ -145,6 +145,8 @@
     <form method="get" action="viewMediaPros">
       <input type="hidden" name="sortBy" value="rating">
       <button type="submit">Sort by Rating</button>
+      <a href="adminDashboard.jsp" style="padding:10px 20px; background-color:#af4c4c; color:white; border:none; border-radius:5px; text-decoration:none;">Back to Home</a>
+
     </form>
   </div>
 

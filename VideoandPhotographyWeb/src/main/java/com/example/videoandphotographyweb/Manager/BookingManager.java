@@ -1,4 +1,3 @@
-// BookingManager.java
 package com.example.videoandphotographyweb.Manager;
 
 import com.example.videoandphotographyweb.Classes.Booking;
@@ -12,7 +11,7 @@ import java.util.Scanner;
 
 public class BookingManager {
     private Queue<Booking> bookingQueue = new LinkedList<>();
-    private final String FILE_PATH = "E:/SLIIT_Bacholer/_1_Year_sem2/OOP_External_Project/VideoandPhotographyWeb/bookings.txt";
+    private final String FILE_PATH = "C:/Users/User/Desktop/New folder/OOP_External_Project/OOP_External_Project/VideoandPhotographyWeb/bookings.txt";
 
     public void addBooking(Booking booking) {
         bookingQueue.add(booking);

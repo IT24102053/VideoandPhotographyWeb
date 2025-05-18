@@ -8,7 +8,7 @@ import java.io.IOException;
 import java.util.*;
 
 public class AdminManager {
-    private static final String FILE_PATH = "E:/1nd Y 2sem/Project/OOP_External_Project/OOP_External_Project/VideoandPhotographyWeb/admins.txt";
+    private static final String FILE_PATH = "/Users/shaleenasamadhushi/Desktop/Year 1 Sem 2/Project/OOP_External_Project/VideoandPhotographyWeb/admins.txt";
 
     public boolean validateAdmin(String username, String password) {
         try (Scanner scanner = new Scanner(new File(FILE_PATH))) {
